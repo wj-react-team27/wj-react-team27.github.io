@@ -5,8 +5,9 @@ import { useState } from "react";
 import BannerSample from "./example/BannerSample";
 import CardCustom from "./example/CardCustom";
 import ButtonSample from "./example/ButtonSample";
-import CardSample from "./example/CardSample";
 import PoinTStyleProvider from "./styles/StyleProvider";
+import ItemSample from "./example/ItemSample";
+import CardSample from "./example/CardSample";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -61,6 +62,8 @@ function App() {
         return <ButtonSample></ButtonSample>;
       case "card":
         return <CardSample></CardSample>;
+      case "item":
+        return <ItemSample></ItemSample>;
       default:
         return <div>Error</div>;
     }
@@ -95,6 +98,14 @@ function App() {
                 description={"Card"}
                 onClick={() => setIsSelected("card")}
                 isSelected={"card" === isSeleced}
+              />
+              <CardCustom
+                imageUrl={
+                  "https://static.thenounproject.com/png/3080685-200.png"
+                }
+                description={"Item"}
+                onClick={() => setIsSelected("item")}
+                isSelected={"item" === isSeleced}
               />
             </ComponentsCardBox>
             <ComponentsBox>{selectComponents(isSeleced)}</ComponentsBox>
