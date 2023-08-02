@@ -2,39 +2,11 @@ import { ChangeEvent, useState } from "react";
 import { Banners } from "../components/banners";
 import { styled } from "styled-components";
 import { Title5 } from "../components/typography";
+import { ComponentsItem, ComponentsItems, TypeTable } from "./CommonComponents";
 
 const BannerContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-`;
-
-const ComponentsItems = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-`;
-
-const ComponentsItem = styled.div`
-  & > label {
-    padding-right: 5px;
-  }
-
-  & > input {
-    margin-right: 10px;
-  }
-
-  & > input[type="text"] {
-    display: block;
-  }
-`;
-
-const TypeTable = styled.table`
-  margin-top: 100px;
-  & th,
-  td {
-    text-align: start;
-    min-width: 150px;
-  }
 `;
 
 const BannerSample = () => {
