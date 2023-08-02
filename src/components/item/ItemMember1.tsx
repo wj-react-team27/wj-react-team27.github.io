@@ -1,31 +1,31 @@
-import { Graphic } from '../icon';
-import { Body2, Body4 } from '../typography';
-import { Label } from '../label';
-import { IitemTemplateProps, IitemProps } from '../../types/itemTypes';
-import { getItemStyleOptions } from '../../util';
-import { Item } from '.';
+import { Graphic } from "../icon";
+import { Body2, Body4 } from "../typography";
+import { Label } from "../label";
+import { IitemTemplateProps, IitemProps } from "../../types/itemTypes";
+import { getItemStyleOptions } from "../../util";
+import { Item } from ".";
 
 export const ItemMember1 = ({
   fill,
-  name = '김아무개',
-  trainer = '김파이',
-  gender = '여',
-  date = '2023-00-00',
+  name = "김아무개",
+  trainer = "김파이",
+  gender = "여",
+  date = "2023-00-00",
 }: {
-  fill?: IitemProps['fill'];
-  name?: IitemTemplateProps['name'];
-  trainer?: IitemTemplateProps['trainer'];
-  gender?: IitemTemplateProps['gender'];
-  date?: IitemTemplateProps['date'];
+  fill?: IitemProps["fill"];
+  name?: IitemTemplateProps["name"];
+  trainer?: IitemTemplateProps["trainer"];
+  gender?: IitemTemplateProps["gender"];
+  date?: IitemTemplateProps["date"];
 }): JSX.Element => {
   return (
     <Item.ItemContainer
       $styleOptions={getItemStyleOptions(fill)}
-      $isOutline={fill === 'contained'}>
+      $isOutline={fill === "contained"}>
       <Item.ItemContents>
         <Item.ItemContent>
           <Item.ItemProfile>
-            <Graphic name='profile24px'></Graphic>
+            <Graphic name="profile24px"></Graphic>
             <Body2>{name}</Body2>
           </Item.ItemProfile>
           <Item.ItemText>

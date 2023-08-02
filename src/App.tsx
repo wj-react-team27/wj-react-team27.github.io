@@ -4,6 +4,7 @@ import { color } from "./styles";
 import { useState } from "react";
 import BannerSample from "./example/BannerSample";
 import CardCustom from "./example/CardCustom";
+import ButtonSample from "./example/ButtonSample";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -55,7 +56,7 @@ function App() {
       case "banners":
         return <BannerSample></BannerSample>;
       case "button":
-        return <div>button</div>;
+        return <ButtonSample></ButtonSample>;
       case "card":
         return <div>card</div>;
       default:
