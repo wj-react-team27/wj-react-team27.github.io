@@ -21,7 +21,8 @@ export const ItemMember1 = ({
   return (
     <Item.ItemContainer
       $styleOptions={getItemStyleOptions(fill)}
-      $isOutline={fill === "contained"}>
+      $isOutline={fill === "contained"}
+    >
       <Item.ItemContents>
         <Item.ItemContent>
           <Item.ItemProfile>
@@ -36,7 +37,9 @@ export const ItemMember1 = ({
         </Item.ItemContent>
         <Item.ItemInfo>
           <Item.ItemLabelArea>
-            <Label>{trainer}</Label>
+            <Label background="gray" color="gray">
+              {trainer}
+            </Label>
           </Item.ItemLabelArea>
           <Item.ItemDate>
             <Body4>{date}</Body4>

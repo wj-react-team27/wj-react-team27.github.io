@@ -1,7 +1,7 @@
-import { styled } from 'styled-components';
-import { IitemStyleProps } from '../../types/itemTypes';
-import { color, font } from '../../styles';
-import { Body2 } from '../typography';
+import { styled } from "styled-components";
+import { IitemStyleProps } from "../../types/itemTypes";
+import { color, font } from "../../styles";
+import { Body2 } from "../typography";
 
 export const Item = {
   ItemInfo: styled.div`
@@ -62,7 +62,10 @@ export const Item = {
     align-items: flex-start;
   `,
 
-  ItemLabel: styled.div``,
+  ItemLabel: styled.div`
+    min-width: 80px;
+    text-align: right;
+  `,
 
   ItemIcons: styled.div`
     display: flex;
@@ -98,7 +101,7 @@ export const Item = {
   `,
 
   ItemDate: styled.div`
-    min-width: 85px;
+    min-width: 95px;
   `,
 
   ItemCount: styled.div`

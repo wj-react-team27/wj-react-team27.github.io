@@ -5,6 +5,9 @@ import { useState } from "react";
 import BannerSample from "./example/BannerSample";
 import CardCustom from "./example/CardCustom";
 import ButtonSample from "./example/ButtonSample";
+import { icons } from "./assets/icons";
+import TypographySample from "./example/ItemSample";
+import ItemSample from "./example/ItemSample";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -59,6 +62,8 @@ function App() {
         return <ButtonSample></ButtonSample>;
       case "card":
         return <div>card</div>;
+      case "item":
+        return <ItemSample></ItemSample>;
       default:
         return <div>Error</div>;
     }
@@ -91,6 +96,13 @@ function App() {
                 description={"Card"}
                 onClick={() => setIsSelected("card")}
               />
+              <CardCustom
+                imageUrl={
+                  "https://static.thenounproject.com/png/3080685-200.png"
+                }
+                description={"Item"}
+                onClick={() => setIsSelected("item")}
+              ></CardCustom>
             </ComponentsCardBox>
             <ComponentsBox>{selectComponents(isSeleced)}</ComponentsBox>
           </ComponentsContainer>
