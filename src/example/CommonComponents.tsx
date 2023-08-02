@@ -31,5 +31,6 @@ export const TypeTable = styled.table`
   td {
     text-align: start;
     min-width: 150px;
+    border-bottom: 1px solid #000;
   }
 `;

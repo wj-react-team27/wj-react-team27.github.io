@@ -2,6 +2,7 @@ import {
   ComponentsContainer,
   ComponentsItem,
   ComponentsItems,
+  TypeTable,
 } from "./CommonComponents";
 import { Button } from "../components/button";
 import { Title5 } from "../components/typography";
@@ -157,6 +158,37 @@ const ButtonSample = () => {
       <Button size={attr.size} fill={attr.fill} mode={attr.mode}>
         {attr.children}
       </Button>
+      <TypeTable>
+        <thead>
+          <tr>
+            <th>키</th>
+            <th>타입</th>
+            <th>필수 여부</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>size</td>
+            <td>'full', 'xlarge', 'large', 'medium', 'small', 'xsmall'</td>
+            <td>❎</td>
+          </tr>
+          <tr>
+            <td>fill</td>
+            <td>'contained', 'outline'</td>
+            <td>❎</td>
+          </tr>
+          <tr>
+            <td>mode</td>
+            <td>'normal', 'enabled', 'disabled'</td>
+            <td>❎</td>
+          </tr>
+          <tr>
+            <td>children</td>
+            <td>string</td>
+            <td>🅾️</td>
+          </tr>
+        </tbody>
+      </TypeTable>
     </ComponentsContainer>
   );
 };
