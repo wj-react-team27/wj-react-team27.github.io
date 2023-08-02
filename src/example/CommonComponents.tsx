@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { color } from "../styles";
 
 export const ComponentsContainer = styled.div`
   display: grid;
@@ -33,4 +34,14 @@ export const TypeTable = styled.table`
     min-width: 150px;
     border-bottom: 1px solid #000;
   }
+`;
+
+export const CodeBlock = styled.code`
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 15px;
+  display: block;
+  white-space: pre-wrap;
+  background: ${color.basicWhite};
+  border-radius: 10px;
+  border: 1px solid ${color.borderLine300};
 `;

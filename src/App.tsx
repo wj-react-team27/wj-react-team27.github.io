@@ -8,6 +8,7 @@ import ButtonSample from "./example/ButtonSample";
 import PoinTStyleProvider from "./styles/StyleProvider";
 import ItemSample from "./example/ItemSample";
 import CardSample from "./example/CardSample";
+import DialogSample from "./example/DialogSample";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -62,6 +63,8 @@ function App() {
         return <ButtonSample></ButtonSample>;
       case "card":
         return <CardSample></CardSample>;
+      case "dialog":
+        return <DialogSample></DialogSample>;
       case "item":
         return <ItemSample></ItemSample>;
       default:
@@ -98,6 +101,14 @@ function App() {
                 description={"Card"}
                 onClick={() => setIsSelected("card")}
                 isSelected={"card" === isSeleced}
+              />
+              <CardCustom
+                imageUrl={
+                  "https://cdn-icons-png.flaticon.com/128/589/589708.png"
+                }
+                description={"Dialog"}
+                onClick={() => setIsSelected("dialog")}
+                isSelected={"dialog" === isSeleced}
               />
               <CardCustom
                 imageUrl={
