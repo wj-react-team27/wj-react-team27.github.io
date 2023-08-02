@@ -1,11 +1,11 @@
-import { styled } from 'styled-components';
-import CardBase from './CardBase';
-import defaultImage from '../../assets/defaultMediumImage.png';
-import { color } from '../../styles';
-import { Body4 } from '../typography';
-import { Icon } from '../icon';
-import { CardLinkMediumProps } from '../../types/cardTypes';
-import { HTMLAttributes } from 'react';
+import { styled } from "styled-components";
+import CardBase from "./CardBase";
+import defaultImage from "../../assets/defaultMediumImage.png";
+import { color } from "../../styles";
+import { Body4 } from "../typography";
+import { Icon } from "../icon";
+import { CardLinkMediumProps } from "../../types/cardTypes";
+import { HTMLAttributes } from "react";
 
 const CardLinkMediumContainer = styled(CardBase)`
   width: 244px;
@@ -46,15 +46,15 @@ const CardLinkMediumText = styled(Body4)`
 
 const CardLinkMedium = ({
   imageUrl = defaultImage,
-  isDelete,
   description,
+  isDelete = false,
   ...props
 }: CardLinkMediumProps): JSX.Element => {
   return (
     <CardLinkMediumContainer>
       {isDelete && (
         <CardLinkMediumCancel {...props}>
-          <Icon name='mediaDelete' />
+          <Icon name="mediaDelete" />
         </CardLinkMediumCancel>
       )}
       <CardLinkMediumImage src={imageUrl}></CardLinkMediumImage>

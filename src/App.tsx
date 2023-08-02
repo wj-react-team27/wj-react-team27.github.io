@@ -5,6 +5,8 @@ import { useState } from "react";
 import BannerSample from "./example/BannerSample";
 import CardCustom from "./example/CardCustom";
 import ButtonSample from "./example/ButtonSample";
+import CardSample from "./example/CardSample";
+import PoinTStyleProvider from "./styles/StyleProvider";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -20,7 +22,7 @@ const MainContainer = styled.div`
 
 const MainContents = styled.div`
   max-width: 1200px;
-  padding-top: 100px;
+  padding: 100px 0;
   margin: auto;
 
   & > p {
@@ -58,14 +60,14 @@ function App() {
       case "button":
         return <ButtonSample></ButtonSample>;
       case "card":
-        return <div>card</div>;
+        return <CardSample></CardSample>;
       default:
         return <div>Error</div>;
     }
   };
 
   return (
-    <>
+    <PoinTStyleProvider>
       <GlobalStyle />
       <MainContainer>
         <MainContents>
@@ -78,11 +80,13 @@ function App() {
                 }
                 description={"Banners"}
                 onClick={() => setIsSelected("banners")}
+                isSelected={"banners" === isSeleced}
               />
               <CardCustom
                 imageUrl={"https://cdn-icons-png.flaticon.com/128/1/1402.png"}
                 description={"Button"}
                 onClick={() => setIsSelected("button")}
+                isSelected={"button" === isSeleced}
               />
               <CardCustom
                 imageUrl={
@@ -90,13 +94,14 @@ function App() {
                 }
                 description={"Card"}
                 onClick={() => setIsSelected("card")}
+                isSelected={"card" === isSeleced}
               />
             </ComponentsCardBox>
             <ComponentsBox>{selectComponents(isSeleced)}</ComponentsBox>
           </ComponentsContainer>
         </MainContents>
       </MainContainer>
-    </>
+    </PoinTStyleProvider>
   );
 }
 
