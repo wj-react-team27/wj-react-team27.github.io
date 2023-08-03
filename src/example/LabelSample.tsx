@@ -16,7 +16,7 @@ const LabelContainer = styled.div`
 
 const LabelSample = () => {
   const [options, setOptions] = useState<IlabelProps>({
-    children: "Label",
+    children: "",
     shape: "rectangle",
     background: "blue",
     color: "blue500",
@@ -32,6 +32,13 @@ const LabelSample = () => {
     }));
   };
 
+  const onChangeChildren = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    setOptions((prev) => ({
+      ...prev,
+      children: value,
+    }));
+  };
   return (
     <ComponentsContainer>
       <ComponentsItems>
@@ -44,6 +51,7 @@ const LabelSample = () => {
             id="rectangle"
             value="rectangle"
             onChange={() => onChangeOption("shape", "rectangle")}
+            defaultChecked
           />
           <label htmlFor="round">round</label>
           <input
@@ -84,6 +92,16 @@ const LabelSample = () => {
             <option value="green">green</option>
           </select>
         </ComponentsItem>
+        <Title5>Children</Title5>
+        <ComponentsItem>
+          <label htmlFor="children">Label 내용 : </label>
+          <input
+            id="children"
+            type="children"
+            value={options.children}
+            onChange={onChangeChildren}
+          />
+        </ComponentsItem>
       </ComponentsItems>
       <LabelContainer>
         <Label
@@ -91,7 +109,7 @@ const LabelSample = () => {
           background={options.background}
           color={options.color}
         >
-          갱스터
+          {options.children}
         </Label>
       </LabelContainer>
       <TypeTable>
