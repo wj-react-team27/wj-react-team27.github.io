@@ -1,14 +1,14 @@
 export interface IbottomNavigationBarProps {
-  tabNameLists: {
+  tabNameLists?: {
     home: string;
     reservation: string;
     patient: string;
     center: string;
     mypage: string;
   };
-  onClickHome: () => void;
-  onClickReservation: () => void;
-  onClickPatient: () => void;
-  onClickCenter: () => void;
-  onClickMypage: () => void;
+  onClickHome?: () => void;
+  onClickReservation?: () => void;
+  onClickPatient?: () => void;
+  onClickCenter?: () => void;
+  onClickMypage?: () => void;
 }

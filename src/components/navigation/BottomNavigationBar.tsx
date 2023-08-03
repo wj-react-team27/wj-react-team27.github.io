@@ -1,9 +1,9 @@
-import { styled } from 'styled-components';
-import { color } from '../../styles';
-import { Icon } from '../icon';
-import { Caption2 } from '../typography';
-import { getPath } from '../../util';
-import { IbottomNavigationBarProps } from '../../types/bottomNavigationBarTypes';
+import { styled } from "styled-components";
+import { color } from "../../styles";
+import { Icon } from "../icon";
+import { Caption2 } from "../typography";
+import { getPath } from "../../util";
+import { IbottomNavigationBarProps } from "../../types/bottomNavigationBarTypes";
 
 const BottomNavigationBar = ({
   tabNameLists,
@@ -17,43 +17,23 @@ const BottomNavigationBar = ({
     <NavigationLayout>
       <IconContainer>
         <IconWrap onClick={onClickHome}>
-          {getPath() === tabNameLists.home ? (
-            <Icon name={'onHome'} />
-          ) : (
-            <Icon name={'offHome'} />
-          )}
+          {getPath() === tabNameLists?.home ? <Icon name={"onHome"} /> : <Icon name={"offHome"} />}
           <Caption2>홈</Caption2>
         </IconWrap>
         <IconWrap onClick={onClickReservation}>
-          {getPath() === tabNameLists.reservation ? (
-            <Icon name={'onReserve'} />
-          ) : (
-            <Icon name={'offReserve'} />
-          )}
+          {getPath() === tabNameLists?.reservation ? <Icon name={"onReserve"} /> : <Icon name={"offReserve"} />}
           <Caption2>일정관리</Caption2>
         </IconWrap>
         <IconWrap onClick={onClickPatient}>
-          {getPath() === tabNameLists.patient ? (
-            <Icon name={'onPatient'} />
-          ) : (
-            <Icon name={'offPatient'} />
-          )}
+          {getPath() === tabNameLists?.patient ? <Icon name={"onPatient"} /> : <Icon name={"offPatient"} />}
           <Caption2>회원관리</Caption2>
         </IconWrap>
         <IconWrap onClick={onClickCenter}>
-          {getPath() === tabNameLists.center ? (
-            <Icon name={'onCenter'} />
-          ) : (
-            <Icon name={'offCenter'} />
-          )}
+          {getPath() === tabNameLists?.center ? <Icon name={"onCenter"} /> : <Icon name={"offCenter"} />}
           <Caption2>센터관리</Caption2>
         </IconWrap>
         <IconWrap onClick={onClickMypage}>
-          {getPath() === tabNameLists.mypage ? (
-            <Icon name={'onMypage'} />
-          ) : (
-            <Icon name={'offMypage'} />
-          )}
+          {getPath() === tabNameLists?.mypage ? <Icon name={"onMypage"} /> : <Icon name={"offMypage"} />}
           <Caption2>마이페이지</Caption2>
         </IconWrap>
       </IconContainer>
