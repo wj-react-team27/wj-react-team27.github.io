@@ -7,14 +7,14 @@ import {
   DialogDescription,
   DialogTitle,
 } from "../components/dialog";
-import { CodeBlock, ComponentsContainer, TypeTable } from "./CommonComponents";
+import {
+  CodeBlock,
+  ComponentsContainer,
+  ComponentsDescription,
+  TypeTable,
+} from "./CommonComponents";
 import { Button } from "../components/button";
 import { Body4, Title5 } from "../components/typography";
-import { styled } from "styled-components";
-
-const DialogDescriptionText = styled.div`
-  padding: 20px 0;
-`;
 
 const DialogSample = () => {
   const [isHide, setIsHide] = useState(false);
@@ -71,7 +71,7 @@ const DialogSample = () => {
           </tr>
         </tbody>
       </TypeTable>
-      <DialogDescriptionText>
+      <ComponentsDescription>
         <Title5>부가설명</Title5>
         <Body4>아래와 같은 구조로 이루어짐.</Body4>
         <Body4>
@@ -104,7 +104,7 @@ const DialogSample = () => {
           `}
           </CodeBlock>
         </Body4>
-      </DialogDescriptionText>
+      </ComponentsDescription>
     </>
   );
 };

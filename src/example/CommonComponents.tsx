@@ -45,3 +45,7 @@ export const CodeBlock = styled.code`
   border-radius: 10px;
   border: 1px solid ${color.borderLine300};
 `;
+
+export const ComponentsDescription = styled.div`
+  padding: 20px 0;
+`;
