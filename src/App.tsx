@@ -1,6 +1,5 @@
 import { createGlobalStyle, styled } from "styled-components";
 import { Headline } from "./components/typography";
-import { color } from "./styles";
 import { useState } from "react";
 import BannerSample from "./example/BannerSample";
 import CardCustom from "./example/CardCustom";
@@ -23,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const MainContainer = styled.div`
-  background: ${color.primary50};
+  background: #fffffb;
 `;
 
 const MainContents = styled.div`
