@@ -12,6 +12,7 @@ import DialogSample from "./example/DialogSample";
 import TopNaviSample from "./example/TopNaviSample";
 import BotNaviSample from "./example/BotNaviSample";
 import TabsSample from "./example/TabsSample";
+import LabelSample from "./example/LabelSample";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -22,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const MainContainer = styled.div`
-  background: ${color.background};
+  background: ${color.primary50};
 `;
 
 const MainContents = styled.div`
@@ -76,6 +77,8 @@ function App() {
         return <TopNaviSample></TopNaviSample>;
       case "botNavi":
         return <BotNaviSample></BotNaviSample>;
+      case "label":
+        return <LabelSample></LabelSample>;
       default:
         return <div>Error</div>;
     }
@@ -90,7 +93,9 @@ function App() {
           <ComponentsContainer>
             <ComponentsCardBox>
               <CardCustom
-                imageUrl={"https://cdn-icons-png.flaticon.com/128/6057/6057969.png"}
+                imageUrl={
+                  "https://cdn-icons-png.flaticon.com/128/6057/6057969.png"
+                }
                 description={"Banners"}
                 onClick={() => setIsSelected("banners")}
                 isSelected={"banners" === isSeleced}
@@ -102,40 +107,60 @@ function App() {
                 isSelected={"button" === isSeleced}
               />
               <CardCustom
-                imageUrl={"https://cdn-icons-png.flaticon.com/128/3132/3132909.png"}
+                imageUrl={
+                  "https://cdn-icons-png.flaticon.com/128/3132/3132909.png"
+                }
                 description={"Card"}
                 onClick={() => setIsSelected("card")}
                 isSelected={"card" === isSeleced}
               />
               <CardCustom
-                imageUrl={"https://cdn-icons-png.flaticon.com/128/589/589708.png"}
+                imageUrl={
+                  "https://cdn-icons-png.flaticon.com/128/589/589708.png"
+                }
                 description={"Dialog"}
                 onClick={() => setIsSelected("dialog")}
                 isSelected={"dialog" === isSeleced}
               />
               <CardCustom
-                imageUrl={"https://static.thenounproject.com/png/3080685-200.png"}
+                imageUrl={
+                  "https://static.thenounproject.com/png/3080685-200.png"
+                }
                 description={"Item"}
                 onClick={() => setIsSelected("item")}
                 isSelected={"item" === isSeleced}
               />
               <CardCustom
-                imageUrl={"https://cdn-icons-png.flaticon.com/128/1665/1665599.png"}
+                imageUrl={
+                  "https://cdn-icons-png.flaticon.com/128/1665/1665599.png"
+                }
                 description={"Tabs"}
                 onClick={() => setIsSelected("tabs")}
                 isSelected={"tabs" === isSeleced}
               />
               <CardCustom
-                imageUrl={"https://cdn-icons-png.flaticon.com/128/3132/3132909.png"}
-                description={"topNavi"}
+                imageUrl={
+                  "https://cdn-icons-png.flaticon.com/128/3132/3132909.png"
+                }
+                description={"TopNavigation"}
                 onClick={() => setIsSelected("topNavi")}
                 isSelected={"topNavi" === isSeleced}
               />
               <CardCustom
-                imageUrl={"https://cdn-icons-png.flaticon.com/128/3132/3132909.png"}
-                description={"botNavi"}
+                imageUrl={
+                  "https://cdn-icons-png.flaticon.com/128/3132/3132909.png"
+                }
+                description={"BottomNavigation"}
                 onClick={() => setIsSelected("botNavi")}
                 isSelected={"botNavi" === isSeleced}
+              />
+              <CardCustom
+                imageUrl={
+                  "https://static.thenounproject.com/png/1126708-200.png"
+                }
+                description={"Label"}
+                onClick={() => setIsSelected("label")}
+                isSelected={"label" === isSeleced}
               />
             </ComponentsCardBox>
             <ComponentsBox>{selectComponents(isSeleced)}</ComponentsBox>
