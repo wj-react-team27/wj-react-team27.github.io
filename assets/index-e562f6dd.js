@@ -609,7 +609,7 @@ Error generating stack: `+o.message+`
     box-sizing: border-box;
   }
 `,Ks=y.div`
-  background: ${E.primary50};
+  background: #fffffb;
 `,Ys=y.div`
   max-width: 1200px;
   padding: 100px 0;
